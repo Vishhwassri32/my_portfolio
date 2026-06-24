@@ -6,25 +6,20 @@
 <meta name="description" content="Vishwas Srivastava — Data Science Undergraduate & Portfolio">
 <meta name="keywords" content="Data Science, Data Analyst, Portfolio, Python, SQL, Power BI">
 <meta name="author" content="Vishwas Srivastava">
-<meta property="og:title" content="Vishwas Srivastava — Data Science Portfolio">
-<meta property="og:description" content="Data Science undergraduate skilled in turning large datasets into actionable business insights.">
-<meta property="og:type" content="website">
 <title>Vishwas Srivastava — Data Science & Analytics Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <script>
 tailwind.config = {
   darkMode: 'class',
   theme: {
     extend: {
-      fontFamily: { display: ['PT Sans','sans-serif'], body: ['DM Sans','sans-serif'] },
-      // Custom ACM Blue theme matching your style preferences
-      colors: { accent: '#0055A4', 'accent-light': '#1E75C4' }
+      fontFamily: { display: ['PT Sans','sans-serif'], body: ['DM Sans','sans-serif'] }
     }
   }
 }
@@ -45,24 +40,13 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
 .reveal.in{opacity:1;transform:none}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
-
-.nl{position:relative}
-.nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:1.5px;background:currentColor;transition:width .22s cubic-bezier(.4,0,.2,1)}
-.nl:hover::after,.nl.on::after{width:100%}
-.nl.on{font-weight:500}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 
 .shimmer{position:relative;overflow:hidden}
 .shimmer::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:rgba(255,255,255,.18);transform:skewX(-20deg);transition:left .4s cubic-bezier(.4,0,.2,1)}
 .shimmer:hover::after{left:160%}
 
-.pf{overflow:hidden;background:#d4d4d8}
 .pf img{width:100%;height:100%;object-fit:cover;display:block}
-
-.card-h{transition:transform .28s cubic-bezier(.4,0,.2,1),border-color .18s}
-.card-h:hover{transform:translateY(-4px)}
-
-.stag{transition:border-color .18s}
 [x-cloak]{display:none!important}
 </style>
 </head>
@@ -71,26 +55,26 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
 <header class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
   :class="sc?'bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md shadow-sm shadow-black/5':''">
-  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between" aria-label="Main navigation">
+  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
     <a href="#hero" class="font-display font-bold text-xl tracking-tight relative z-10">
-      <span class="text-zinc-900 dark:text-white">vishwas.</span><span class="text-accent">ds</span>
+      <span class="text-zinc-900 dark:text-white">vishwas.</span><span class="text-[#0055A4]">ds</span>
     </a>
 
-    <ul class="hidden md:flex items-center gap-8 text-sm" role="list">
-      <li><a href="#services" class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='services'?'on !text-zinc-900 dark:!text-white'">Expertise</a></li>
-      <li><a href="#work"     class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='work'?'on !text-zinc-900 dark:!text-white'">Projects</a></li>
-      <li><a href="#about"    class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='about'?'on !text-zinc-900 dark:!text-white'">Skills</a></li>
-      <li><a href="#contact"  class="nl text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors" :class="s==='contact'?'on !text-zinc-900 dark:!text-white'">Contact</a></li>
+    <ul class="hidden md:flex items-center gap-8 text-sm">
+      <li><a href="#services" class="text-zinc-500 dark:text-zinc-400 hover:text-[#0055A4] transition-colors">Expertise</a></li>
+      <li><a href="#work"     class="text-zinc-500 dark:text-zinc-400 hover:text-[#0055A4] transition-colors">Projects</a></li>
+      <li><a href="#about"    class="text-zinc-500 dark:text-zinc-400 hover:text-[#0055A4] transition-colors">Skills</a></li>
+      <li><a href="#contact"  class="text-zinc-500 dark:text-zinc-400 hover:text-[#0055A4] transition-colors">Contact</a></li>
     </ul>
 
     <div class="flex items-center gap-3">
-      <button @click="dark=!dark" class="w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors" :aria-label="dark?'Light mode':'Dark mode'">
+      <button @click="dark=!dark" class="w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 dark:border-zinc-800 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-colors">
         <svg x-show="!dark" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
         <svg x-show="dark"  class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707M12 8a4 4 0 100 8 4 4 0 000-8z"/></svg>
       </button>
-      <a href="#contact" class="hidden md:inline-flex items-center gap-2 shimmer bg-accent text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-accent-light transition-colors">
-        Let's Connect <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 shimmer bg-[#0055A4] text-white text-sm font-medium px-5 py-2 rounded-full hover:bg-[#1E75C4] transition-colors">
+        Let's Connect
       </a>
     </div>
   </nav>
@@ -99,23 +83,21 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 <main>
 
 <section id="hero" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
-  <div class="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute bottom-1/4 left-0 w-64 h-64 bg-zinc-200/50 dark:bg-zinc-800/30 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute top-1/4 right-0 w-96 h-96 bg-[#0055A4]/10 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <p class="reveal text-sm font-medium text-accent tracking-widest uppercase mb-4">Open to Software & Analytics Opportunities</p>
+        <p class="reveal text-sm font-medium text-[#0055A4] tracking-widest uppercase mb-4">Open to Software & Analytics Opportunities</p>
         <h1 class="reveal d1 font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-6">
-          Hi, I'm <span class="text-accent">Vishwas</span>
+          Hi, I'm <span class="text-[#0055A4]">Vishwas</span>
         </h1>
         <p class="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10">
-          A <strong class="font-medium text-zinc-700 dark:text-zinc-300">Data Science Undergraduate</strong> passionate about data cleaning, dashboard development, and generating actionable insights from complex datasets.
+          A <strong class="font-medium text-zinc-700 dark:text-zinc-300">Data Science Undergraduate</strong> passionate about data cleaning, dashboard development, and generating insights.
         </p>
         <div class="reveal d3 flex flex-wrap gap-4">
           <a href="#work" class="shimmer inline-flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors text-sm">
             Explore Projects
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </a>
           <a href="#contact" class="inline-flex items-center gap-2 border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors text-sm">Get in touch</a>
         </div>
@@ -123,10 +105,13 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
       <div class="reveal d2 flex justify-center md:justify-end">
         <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-          <div class="pf w-full h-full rounded-3xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center">
-            <svg class="w-20 h-20 text-zinc-300 dark:text-zinc-700" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/></svg>
+          <div class="pf w-full h-full rounded-3xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center overflow-hidden">
+            <img src="my-photo.jpg" alt="Vishwas Srivastava" onerror="this.style.display='none'; document.getElementById('pic-ph').style.display='flex';" class="w-full h-full object-cover">
+            <div id="pic-ph" class="hidden items-center justify-center w-full h-full text-zinc-300 dark:text-zinc-700">
+              <svg class="w-20 h-20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/></svg>
+            </div>
           </div>
-          <div class="absolute -bottom-4 -left-4 bg-accent text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg">Lucknow, India</div>
+          <div class="absolute -bottom-4 -left-4 bg-[#0055A4] text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg">Lucknow, India</div>
         </div>
       </div>
     </div>
@@ -136,33 +121,33 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 <section id="services" class="py-24 bg-zinc-50 dark:bg-zinc-900/40">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-14">
-      <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Core Focus</p>
+      <p class="reveal text-xs font-medium text-[#0055A4] tracking-widest uppercase mb-3">Core Focus</p>
       <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">What I Do</h2>
     </div>
     <div class="grid md:grid-cols-3 gap-6">
 
-      <article class="reveal d1 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
-          <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      <article class="reveal d1 bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-[#0055A4] transition-all duration-300">
+        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-xl mb-6 text-[#0055A4]">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
         </div>
         <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">Data Analytics</h3>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Proficient in data cleaning, exploratory data analysis (EDA), and turning raw datasets into actionable commercial logic and tracking key metrics.</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Proficient in data cleaning, exploratory data analysis (EDA), and turning raw datasets into actionable tracking logic.</p>
       </article>
 
-      <article class="reveal d2 card-h group bg-zinc-900 dark:bg-zinc-800 rounded-2xl p-8 border border-zinc-800 hover:border-accent">
-        <div class="w-12 h-12 flex items-center justify-center bg-zinc-800 dark:bg-zinc-700 rounded-xl mb-6 group-hover:bg-accent/20 transition-colors">
-          <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+      <article class="reveal d2 bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-[#0055A4] transition-all duration-300">
+        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-xl mb-6 text-[#0055A4]">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
         </div>
-        <h3 class="font-display font-bold text-xl text-white mb-3">Predictive Modeling</h3>
-        <p class="text-sm text-zinc-400 leading-relaxed">Applying preprocessing, feature engineering, and standard classification or regression frameworks to build meaningful ML pipelines.</p>
+        <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">Predictive Modeling</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Applying preprocessing, feature engineering, and standard regression models to build end-to-end ML code framework setups.</p>
       </article>
 
-      <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
-          <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/></svg>
+      <article class="reveal d3 bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-[#0055A4] transition-all duration-300">
+        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-xl mb-6 text-[#0055A4]">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/></svg>
         </div>
         <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">Reporting & BI</h3>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Designing interactive dashboards using Microsoft Power BI and Streamlit to monitor campaign performance and KPIs.</p>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Designing interactive interfaces using Microsoft Power BI and Streamlit to monitor campaign health indicators.</p>
       </article>
 
     </div>
@@ -172,38 +157,34 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 <section id="work" class="py-24">
   <div class="max-w-6xl mx-auto px-6">
     <div class="mb-14">
-      <p class="reveal text-xs font-medium text-accent tracking-widest uppercase mb-3">Portfolio</p>
+      <p class="reveal text-xs font-medium text-[#0055A4] tracking-widest uppercase mb-3">Portfolio</p>
       <h2 class="reveal d1 font-display font-bold text-4xl md:text-5xl text-zinc-900 dark:text-white">Featured Projects</h2>
     </div>
 
     <div class="grid md:grid-cols-2 gap-6">
 
-      <article class="card-h reveal d1 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="p-7">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-blue-50 dark:bg-zinc-800 text-accent border border-blue-200 dark:border-zinc-700 px-3 py-1 rounded-full">Python</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Pandas</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Seaborn</span>
-          </div>
-          <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-2">WPL Performance Analytics System</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">
-            Built a scalable analytics system to track and evaluate key performance metrics across players and match locations. Designed robust reusable data pipelines for repeatable metric generation.
-          </p>
+      <article class="reveal d1 rounded-2xl p-7 bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#0055A4] transition-all duration-300">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-blue-50 dark:bg-zinc-800 text-[#0055A4] border border-blue-200 dark:border-zinc-700 px-3 py-1 rounded-full">Python</span>
+          <span class="text-xs bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Pandas</span>
+          <span class="text-xs bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Seaborn</span>
         </div>
+        <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-2">WPL Performance Analytics System</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">
+          Built a scalable metrics evaluation platform on league history data. Developed clear data architectures to engineer performance metrics over running sets.
+        </p>
       </article>
 
-      <article class="card-h reveal d2 group rounded-2xl overflow-hidden bg-zinc-100 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="p-7">
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="text-xs bg-blue-50 dark:bg-zinc-800 text-accent border border-blue-200 dark:border-zinc-700 px-3 py-1 rounded-full">Streamlit</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Regression</span>
-            <span class="text-xs bg-zinc-200 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Python</span>
-          </div>
-          <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-2">Railway Delay Prediction System</h3>
-          <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">
-            Developed an end-to-end predictive framework modeling arrival and transit delays. Implemented a user-friendly frontend to display real-time evaluation insights.
-          </p>
+      <article class="reveal d2 rounded-2xl p-7 bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#0055A4] transition-all duration-300">
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-blue-50 dark:bg-zinc-800 text-[#0055A4] border border-blue-200 dark:border-zinc-700 px-3 py-1 rounded-full">Streamlit</span>
+          <span class="text-xs bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Regression</span>
+          <span class="text-xs bg-zinc-200 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-400 px-3 py-1 rounded-full">Python</span>
         </div>
+        <h3 class="font-display font-bold text-2xl text-zinc-900 dark:text-white mb-2">Railway Delay Prediction System</h3>
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">
+          Designed an end-to-end framework estimating arrival discrepancies. Integrated a robust visual model interface framework using Streamlit engine libraries.
+        </p>
       </article>
 
     </div>
@@ -215,8 +196,8 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div>
         <h2 class="font-display font-bold text-4xl text-zinc-900 dark:text-white mb-6">Technical Ecosystem</h2>
-        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-4">
-          Pursuing a Bachelor of Technology in Computer Science & Engineering with a concentration in Data Science. Equipped to clean complex data fields, execute EDA, and construct pipelines.
+        <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+          Pursuing a Bachelor of Technology in Computer Science & Engineering (Data Science). Fully structured to process large matrix distributions, clean complex raw features, and execute dashboard models.
         </p>
       </div>
 
@@ -224,19 +205,18 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Core Stack</h3>
           <div class="flex flex-wrap gap-2">
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Python</span>
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">SQL</span>
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Pandas & NumPy</span>
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Power BI</span>
+            <span class="border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Python</span>
+            <span class="border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">SQL</span>
+            <span class="border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Pandas & NumPy</span>
+            <span class="border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Power BI</span>
           </div>
         </div>
         <div>
           <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-400 mb-3">Tools & Utilities</h3>
           <div class="flex flex-wrap gap-2">
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Git & GitHub</span>
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Kaggle</span>
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Excel</span>
-            <span class="stag border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">HTML/CSS/JS basics</span>
+            <span class="border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Git & GitHub</span>
+            <span class="border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Kaggle</span>
+            <span class="border border-zinc-200 dark:border-zinc-800 px-3 py-1.5 rounded-xl text-xs font-medium">Excel</span>
           </div>
         </div>
       </div>
@@ -248,14 +228,14 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="font-display font-bold text-4xl text-zinc-900 dark:text-white mb-4">Connect With Me</h2>
     <p class="text-zinc-500 dark:text-zinc-400 max-w-md mx-auto mb-8 text-sm">
-      Drop an email or check out my shared code frameworks online.
+      Drop an email or check out my live metrics repositories online.
     </p>
     <div class="flex flex-wrap justify-center gap-6 text-sm font-medium">
-      <a href="mailto:srivastavavishwas60@gmail.com" class="text-accent hover:underline">srivastavavishwas60@gmail.com</a>
+      <a href="mailto:srivastavavishwas60@gmail.com" class="text-[#0055A4] hover:underline">srivastavavishwas60@gmail.com</a>
       <span class="text-zinc-300">|</span>
-      <a href="#" target="_blank" class="hover:text-accent transition-colors">LinkedIn</a>
-      <a href="#" target="_blank" class="hover:text-accent transition-colors">GitHub</a>
-      <a href="#" target="_blank" class="hover:text-accent transition-colors">Kaggle</a>
+      <a href="https://linkedin.com/in/YOUR-PROFILE" target="_blank" class="hover:text-[#0055A4] transition-colors">LinkedIn</a>
+      <a href="https://github.com/Vishhwassri32" target="_blank" class="hover:text-[#0055A4] transition-colors">GitHub</a>
+      <a href="https://www.kaggle.com/YOUR-PROFILE" target="_blank" class="hover:text-[#0055A4] transition-colors">Kaggle</a>
     </div>
   </div>
 </section>
@@ -273,16 +253,12 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 function app() {
   return {
     dark: false,
-    mm: false,
     sc: false,
-    s: 'hero',
     init() {
       this.dark = localStorage.getItem('theme') === 'dark' ||
         (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
       this.$watch('dark', v => localStorage.setItem('theme', v ? 'dark' : 'light'));
-      window.addEventListener('scroll', () => {
-        this.sc = window.scrollY > 20;
-      }, { passive: true });
+      window.addEventListener('scroll', () => { this.sc = window.scrollY > 20; }, { passive: true });
       const io = new IntersectionObserver(entries => {
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
       }, { threshold: 0.1 });
